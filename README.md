@@ -18,13 +18,21 @@ The `soft_delete` method sets the `deleted_at` attribute to the current time, us
 ## Database
 
 I don't know if my testing values were added with Git, so, just in case, you can add your own values by running:
-```bin/rails console```
+```
+bin/rails console
+```
 to access the Ruby on Rails interactive console from a Unix command line. From there you can run:
-```Item.new(name: "name of your item here").save```
+```
+Item.new(name: "name of your item here").save
+```
 to generate and add a new item to the database.
 
 To retrieve an item, run:
-```Item.unscoped.all```
+```
+Item.unscoped.all
+```
 to get a list of all items, including deleted items. Pick any `id` and run:
-```item_x = Item.unscoped.find(ID)```
+```
+item_x = Item.unscoped.find(ID)
+```
 to store a value from the database in the `item_x` variable. You can then call `item_x.soft_delete` to delete the file or `item_x.restore` to restore the file. `item_x.deleted` returns `true` if the file has a deleted timestamp.
