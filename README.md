@@ -1,25 +1,13 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sorry in advance if I don't know the exact steps to get the program to run!
 
-Things you may want to cover:
+To start the server locally:
+```
+bundle install
+bin/rails server
+```
 
-* Ruby version
+`127.0.0.1:3000` is the local address to access the server using a browser. The homepage by default shows a list of all items in the database. `127.0.0.1:3000/tests` shows all non-deleted items.
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# PacerPro-takehome
+You can run `bundle exec rspec spec/item_spec.rb` to run the RSpec tests for the Item model, with the tests stored in `spec/`.
